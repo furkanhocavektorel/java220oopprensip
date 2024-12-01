@@ -12,17 +12,23 @@ public class Main {
 
         Personel personel= new Personel();
 
-        personel.ad="ali";
-        personel.soyad="türkmen";
+        personel.setAd("buse");
 
-        personel.sifreOlustur(personel.ad);
+        personel.setSoyad("koc");
 
-        personel.mailOlustur(personel.ad,personel.soyad);
+        personel.setPassword(personel.getAd());
+        personel.setMail(personel.getAd(),personel.getSoyad());
 
-        System.out.println(personel.ad);
-        System.out.println(personel.soyad);
-        System.out.println(personel.mailiGetir());
+        personel.setYas(1990);
 
+        System.out.println(personel.getYas()); // ekranda :{ 34 } yazacak
+
+
+
+        System.out.println(personel.getAd());
+        System.out.println(personel.getSoyad());
+        System.out.println(personel.getMail());
+        System.out.println(personel.getPassword());
     }
 
 

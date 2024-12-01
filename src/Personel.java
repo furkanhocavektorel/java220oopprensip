@@ -1,25 +1,80 @@
 public class Personel {
 
-    public String ad;
-    public String soyad;
-    public long TCKN;
+    private String ad;
+    private String soyad;
+    private long TCKN;
     private String mail;
     private String password;
+    private int yas;
+
+    // personel dogum tarihi alıp yas ataması gerçekleştirin
 
 
-    public void mailOlustur(String ad,String soyad){
+
+    public void setYas(int dogumTarihi){
+        int yas=2024-dogumTarihi;
+        this.yas=yas;
+    }
+
+
+    public int getYas(){
+        return yas;
+    }
+
+
+    public long getTCKN(){
+        return this.TCKN;
+    }
+
+    public void setTCKN(long tckn){
+        this.TCKN=tckn;
+    }
+
+
+
+    public void setSoyad(String soyad){
+        this.soyad=soyad;
+    }
+
+    public String getSoyad(){
+        return soyad;
+    }
+
+
+
+
+
+
+    public String getAd(){
+        return ad;
+    }
+
+    public void setAd(String personelAdi){
+        ad=personelAdi;
+    }
+
+
+
+
+
+    public void setMail(String ad,String soyad){
         // ad.soyad@gmail.com
         String olusanMail=ad+"."+soyad+"@gmail.com";
         mail=olusanMail;
     }
 
-    public String mailiGetir(){
+    public String getMail(){
         return mail;
     }
 
-    public void sifreOlustur(String ad){
+    public void setPassword(String ad){
         String pass=ad+123;
         password=pass;
     }
+
+    public String getPassword(){
+        return password;
+    }
+
 
 }
