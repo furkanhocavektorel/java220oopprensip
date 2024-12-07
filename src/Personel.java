@@ -1,5 +1,9 @@
 public class Personel {
 
+    //  OOP -> Object  ort prog.
+    /*
+    * 1_ Encapsulation -> kapsülleme
+    * */
     private String ad;
     private String soyad;
     private long TCKN;
@@ -7,74 +11,69 @@ public class Personel {
     private String password;
     private int yas;
 
-    // personel dogum tarihi alıp yas ataması gerçekleştirin
-
-
-
-    public void setYas(int dogumTarihi){
-        int yas=2024-dogumTarihi;
-        this.yas=yas;
-    }
-
-
-    public int getYas(){
-        return yas;
-    }
-
-
-    public long getTCKN(){
-        return this.TCKN;
-    }
-
-    public void setTCKN(long tckn){
+    // Constructor --> yapıcı metot
+    public Personel(long tckn,String soyad){
         this.TCKN=tckn;
     }
 
-
-
-    public void setSoyad(String soyad){
-        this.soyad=soyad;
+    public Personel(String mail, String password) {
+        this.mail = mail;
+        this.password = password;
     }
 
-    public String getSoyad(){
+    public Personel(String ad, String soyad, int yas) {
+        this.ad = ad;
+        this.soyad = soyad;
+        this.yas = yas;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+
+
+
+
+
+    // personel dogum tarihi alıp yas ataması gerçekleştirin
+
+    public long getTCKN() {
+        return TCKN;
+    }
+
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+    public String getAd() {
+        return ad;
+    }
+    public String getSoyad() {
         return soyad;
     }
 
 
-
-
-
-
-    public String getAd(){
-        return ad;
-    }
-
-    public void setAd(String personelAdi){
-        ad=personelAdi;
-    }
-
-
-
-
-
-    public void setMail(String ad,String soyad){
-        // ad.soyad@gmail.com
-        String olusanMail=ad+"."+soyad+"@gmail.com";
-        mail=olusanMail;
-    }
-
-    public String getMail(){
+    public String getMail() {
         return mail;
     }
 
-    public void setPassword(String ad){
-        String pass=ad+123;
-        password=pass;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
+    public int getYas() {
+        return yas;
+    }
+
+    public void setYas(int yas) {
+        this.yas = yas;
+    }
 }
